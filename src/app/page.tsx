@@ -12,7 +12,7 @@ export default function Home() {
       <Nav />
       <main
         id="home"
-        className="flex justify-center py-28 xl:pt-52 pb-8 md:pb-28 bg-slate-200/20 text-slate-600"
+        className="flex justify-center pt-28 lg:py-24 xl:pt-52 xl:pb-8  bg-slate-200/20 text-slate-600"
       >
         <div className="flex justify-center flex-col lg:flex-row w-full max-w-screen-2xl text-center lg:text-left gap-10 lg:mx-10 xl:mx-20 sm:mx-16">
           <div className="lg:w-7/12 3xl:w-8/12 flex flex-col gap-10 mx-8 lg:mx-0">
