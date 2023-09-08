@@ -53,7 +53,7 @@ const RoughAnnotation = () => {
           </RoughNotation>{" "}
           technician, I am eager to contribute to the exciting world of software
           development. My commitment to constant growth and inventive thinking
-          drives me to seek
+          drives me to seek{" "}
           <RoughNotation
             type="highlight"
             color="rgb(187,247,208, 0.8)"
@@ -107,7 +107,10 @@ const RoughAnnotation = () => {
           >
             evolving
           </RoughNotation>{" "}
-          tech landscape. Let&apos;s debug your team --{" "}
+          tech landscape.
+        </span>{" "}
+        <span className="lg:block hidden">
+          Let&apos;s debug your team --
           <RoughNotation
             type="bracket"
             color="rgb(248,113,113, 0.8)"
@@ -115,7 +118,7 @@ const RoughAnnotation = () => {
             padding={6}
             strokeWidth={6}
             animationDuration={1500}
-            animationDelay={10000}
+            animationDelay={9998}
           >
             <RoughNotation
               type="highlight"
@@ -123,7 +126,32 @@ const RoughAnnotation = () => {
               padding={6}
               strokeWidth={6}
               animationDuration={1500}
-              animationDelay={10000}
+              animationDelay={9999}
+              iterations={5}
+            >
+              Hire me
+            </RoughNotation>
+          </RoughNotation>{" "}
+          !
+        </span>
+        <span className="text-center lg:hidden block">
+          Let&apos;s debug your team -- <br />
+          <RoughNotation
+            type="bracket"
+            color="rgb(248,113,113, 0.8)"
+            brackets={["left", "right"]}
+            padding={6}
+            strokeWidth={6}
+            animationDuration={1500}
+            animationDelay={9998}
+          >
+            <RoughNotation
+              type="highlight"
+              color="rgb(253,230,138, 0.8)"
+              padding={6}
+              strokeWidth={6}
+              animationDuration={1500}
+              animationDelay={9999}
               iterations={5}
             >
               Hire me
