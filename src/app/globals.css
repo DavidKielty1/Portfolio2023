@@ -2,26 +2,87 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+@font-face {
+  font-family: "WorkSans";
+  src: url("/font/WorkSans-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "WorkSans";
+  src: url("/font/WorkSans-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "WorkSans";
+  src: url("/font/WorkSans-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+@font-face {
+  font-family: "Raleway";
+  src: url("/font/Raleway-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/font/Raleway-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Raleway";
+  src: url("/font/Raleway-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("/font/Montserrat-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/font/Montserrat-Medium.ttf");
+  font-weight: 500;
+  font-style: normal;
+  font-display: block;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("/font/Montserrat-Bold.ttf");
+  font-weight: 700;
+  font-style: normal;
+  font-display: block;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  box-sizing: border-box;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+
+  overscroll-behavior: none;
 }
