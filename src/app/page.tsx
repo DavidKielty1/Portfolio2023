@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <main>
       <Nav />
-      <main
+      <section
         id="home"
         className="flex justify-center pt-28 lg:py-24 xl:pt-52 xl:pb-8  bg-slate-200/20 text-slate-600"
       >
@@ -18,12 +18,16 @@ export default function Home() {
           <div className="lg:w-7/12 3xl:w-8/12 flex flex-col gap-10 mx-8 lg:mx-0">
             <RoughAnnotation />
             <div className="text-xl flex font-worksans justify-center xl:justify-start flex-col xs:flex-row">
-              <button className="bg-slate-200/5 mr-1 flex-1 border-slate-600 border-2 lg:max-h-20 text-slate-600 rounded-md py-2 xs:px-8 hover:border-slate-200/10 hover:bg-slate-600 hover:text-white max-w-screen-1btn">
-                View LinkedIn
-              </button>
-              <button className="bg-slate-600 ml-1 text-white flex-1 rounded-md border-2 lg:max-h-20 border-slate-200/10 py-2 xs:px-8 hover:border-slate-200/10 hover:border-2 hover:border-slate-600 hover:bg-slate-200/20 hover:text-slate-600 max-w-screen-1btn">
-                View Github
-              </button>
+              <a href="https://www.linkedin.com/in/d%C3%A1ith%C3%AD-%C3%B3-caoilte-53256948/">
+                <button className="bg-slate-200/5 mr-1 flex-1 border-slate-600 border-2 lg:max-h-20 text-slate-600 rounded-md py-2 xs:px-8 hover:border-slate-200/10 hover:bg-slate-600 hover:text-white max-w-screen-1btn">
+                  View LinkedIn
+                </button>
+              </a>
+              <a href="https://github.com/DavidKielty1">
+                <button className="bg-slate-600 ml-1 text-white flex-1 rounded-md border-2 lg:max-h-20 border-slate-200/10 py-2 xs:px-8 hover:border-slate-200/10 hover:border-2 hover:border-slate-600 hover:bg-slate-200/20 hover:text-slate-600 max-w-screen-1btn">
+                  View Github
+                </button>
+              </a>
               <button></button>
             </div>
           </div>
@@ -40,7 +44,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </main>
+      </section>
       <section
         id="projects"
         className="flex justify-center bg-slate-200/20 text-slate-600 px-4 py-4"

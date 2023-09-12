@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Script from "next/script";
 import CarouselItem from "./CarouselItem";
 
@@ -20,8 +20,8 @@ export default function Carousel({ id, config }) {
 
   return (
     <div className="splide min-h-[700px] bottom-36px" id={id}>
-      <div class="splide__track min-h-[700px]">
-        <ul class="splide__list min-h-[700px]">
+      <div className="splide__track min-h-[700px]">
+        <ul className="splide__list min-h-[700px]">
           <CarouselItem />
         </ul>
       </div>
