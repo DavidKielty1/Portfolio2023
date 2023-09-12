@@ -18,12 +18,15 @@ export default function Home() {
           <div className="lg:w-7/12 3xl:w-8/12 flex flex-col gap-10 mx-8 lg:mx-0">
             <RoughAnnotation />
             <div className="text-xl flex font-worksans justify-center xl:justify-start flex-col xs:flex-row">
-              <a href="https://www.linkedin.com/in/d%C3%A1ith%C3%AD-%C3%B3-caoilte-53256948/">
+              <a
+                target="_blank"
+                href="https://www.linkedin.com/in/d%C3%A1ith%C3%AD-%C3%B3-caoilte-53256948/"
+              >
                 <button className="bg-slate-200/5 mr-1 flex-1 border-slate-600 border-2 lg:max-h-20 text-slate-600 rounded-md py-2 xs:px-8 hover:border-slate-200/10 hover:bg-slate-600 hover:text-white max-w-screen-1btn">
                   View LinkedIn
                 </button>
               </a>
-              <a href="https://github.com/DavidKielty1">
+              <a target="_blank" href="https://github.com/DavidKielty1">
                 <button className="bg-slate-600 ml-1 text-white flex-1 rounded-md border-2 lg:max-h-20 border-slate-200/10 py-2 xs:px-8 hover:border-slate-200/10 hover:border-2 hover:border-slate-600 hover:bg-slate-200/20 hover:text-slate-600 max-w-screen-1btn">
                   View Github
                 </button>
