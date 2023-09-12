@@ -65,7 +65,11 @@ export default function Home() {
                 key={idx}
                 className="px-10 text-xl group text-center bg-white font-montserrat py-16 rounded-lg shadow-2xl xl:w-[550px]"
               >
-                <a href={project.url} className=" flex flex-col h-[500px]">
+                <a
+                  href={project.url}
+                  target="_blank"
+                  className="flex flex-col h-[500px]"
+                >
                   <div className=" flex flex-col gap-6 flex-1 py-4 px-4 tracking-tight mb-4 h-[180px]">
                     <h2 className="text-3xl font-bold uppercase tracking-widest">
                       {project.title}
