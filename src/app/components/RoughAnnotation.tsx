@@ -51,7 +51,7 @@ const RoughAnnotation = () => {
           >
             fullstack
           </RoughNotation>{" "}
-          technician, I am eager to contribute to the exciting world of software
+          developer, I am eager to contribute to the exciting world of software
           development. My commitment to constant growth and inventive thinking
           drives me to seek{" "}
           <RoughNotation
