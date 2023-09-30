@@ -86,3 +86,10 @@ body::-webkit-scrollbar {
 
   overscroll-behavior: none;
 }
+
+#animeCanvas {
+  pointer-events: auto !important;
+}
+#animeCanvas {
+  z-index: 1;
+}
