@@ -3,7 +3,7 @@ import { DUMMY_DATA } from "./Nav";
 
 export default function CarouselItem() {
   return (
-    <li class="splide__slide min-h-[700px]">
+    <li className="splide__slide min-h-[700px]">
       {DUMMY_DATA &&
         DUMMY_DATA.map((dummy, idx) => (
           <Card

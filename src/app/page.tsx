@@ -63,28 +63,28 @@ export default function Home() {
             {DUMMY_DATA.map((project, idx) => (
               <article
                 key={idx}
-                className="px-10 text-xl group text-center bg-white font-montserrat py-16 rounded-lg shadow-2xl xl:w-[550px]"
+                className="px-10 text-xl group text-center bg-white font-montserrat py-16 rounded-lg shadow-xl xl:w-[550px] transform transition-transform hover:shadow-2xl hover:scale-105 duration-800"
               >
                 <a
                   href={project.url}
                   target="_blank"
-                  className="flex flex-col h-[500px]"
+                  className="flex flex-col h-[500px] "
                 >
-                  <div className=" flex flex-col gap-6 flex-1 py-4 px-4 tracking-tight mb-4 h-[180px]">
-                    <h2 className="text-3xl font-bold uppercase tracking-widest">
+                  <div className=" flex flex-col gap-6 flex-1 py-4 px-4 tracking-tight mb-4 h-[180px] ">
+                    <h2 className="text-3xl font-bold uppercase tracking-widest hover:group-hover:scale-300">
                       {project.title}
                     </h2>
-                    <div className="relative w-100%">
-                      <p className="absolute group-hover:hidden align-center text-center text-2xl">
+                    <div className="relative w-100% ">
+                      <p className="absolute group-hover:hidden align-center text-center text-2xl ">
                         {project.description}
                       </p>
-                      <p className="absolute hidden group-hover:block text-2xl">
+                      <p className="absolute hidden group-hover:block text-2xl ">
                         {project.tech}
                       </p>
                     </div>
                   </div>
                   <Image
-                    className="flex-1 self-center w-72 aspect-square"
+                    className="flex-1 self-center w-72 aspect-square transform transition-transform hover:group-hover:scale-140"
                     src={project.imagesrc}
                     loading="lazy"
                     width={300}
