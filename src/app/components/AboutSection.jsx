@@ -147,8 +147,8 @@ export default function AboutSection() {
           C#(.NET-WebAPI) and integrating them seamlessly. Proficient in SQL
           varieties, cloud deployment, and ensuring front-end safety using tools
           like TypeScript, Zod, tRPC,ESLint and Prisma ORM. Experienced with
-          testing CI/CD pipelines using GitHub Actions and Docker, and familiar
-          with CSS frameworks like Tailwind, MaterialUI and CSS modules.
+          testing CI/CD pipelines using GitHub Actions and Docker, and CSS,
+          Tailwind virtuoso.
         </p>
         <br />
         <p className="hidden md:block font-montserrat text-2xl text-center md:text-justify">
