@@ -25,8 +25,8 @@ export default function AboutSection() {
     const ctx = canvas.getContext("2d");
 
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
+      canvas.width = canvas.offsetWidth;
+      canvas.height = canvas.offsetHeight;
     };
 
     resizeCanvas();
@@ -34,7 +34,10 @@ export default function AboutSection() {
 
     const bubbles = [];
 
-    for (let i = 0; i < 50; i++) {
+    const isMobile = window.innerWidth < 768; // Adjust based on your mobile breakpoint
+    const scaleFactor = isMobile ? 0.5 : 1; // Reduce the scale factor for mobile view
+
+    for (let i = 0; i < 100; i++) {
       const randomColor = paleColors[
         Math.floor(Math.random() * paleColors.length)
       ].replace("OPACITY", (Math.random() * 0.9 + 0.1).toString());
@@ -43,8 +46,8 @@ export default function AboutSection() {
         x: Math.random() * canvas.width,
         y: canvas.height + 100,
         swing: Math.random() * 1 + 0.1,
-        radius: Math.random() * 300 + 10,
-        speed: Math.random() + 0.5,
+        radius: Math.random() * 60 * scaleFactor, // Scale the radius
+        speed: (Math.random() + 3.7) * scaleFactor, // Scale the speed
         opacity: Math.random() * 0.5 + 0.1,
         color: randomColor,
       });
@@ -62,19 +65,13 @@ export default function AboutSection() {
         if (distance < maxCursorEffectRadius) {
           const dx = b.x - cursor.x;
           const dy = b.y - cursor.y;
-          // console.log("Distance:", distance, "DX:", dx, "DY:", dy);
           const adjustFactor = 0.01; // this determines how quickly the bubble moves away
           b.x += dx * adjustFactor;
           b.y += dy * adjustFactor;
         }
         ctx.beginPath();
-        ctx.arc(
-          b.x - b.radius / 3,
-          b.y - b.radius / 3,
-          b.radius / 4,
-          0,
-          2 * Math.PI
-        );
+        ctx.arc(b.x, b.y, b.radius, 0, 2 * Math.PI);
+
         const gradient = ctx.createRadialGradient(
           b.x,
           b.y,

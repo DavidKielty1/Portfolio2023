@@ -7,15 +7,32 @@ import RoughAnnotation from "./components/RoughAnnotation";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import AboutSection from "./components/AboutSection";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const resizeCanvasToMatchDiv = () => {
+      const targetDiv = document.getElementById("targetDiv"); // Replace with your target div's ID
+      const canvas = document.getElementById("animeCanvas");
+      if (targetDiv && canvas) {
+        canvas.style.height = `${targetDiv.offsetHeight}px`;
+      }
+    };
+
+    window.addEventListener("resize", resizeCanvasToMatchDiv);
+    resizeCanvasToMatchDiv(); // Initial resize on component mount
+
+    return () => {
+      window.removeEventListener("resize", resizeCanvasToMatchDiv);
+    };
+  }, []);
   return (
     <>
       <canvas
         id="animeCanvas"
-        className="absolute top-0 left-0 right-0 bottom-0 z-[-1] h-[3104px]"
+        className="absolute top-0 left-0 right-0 bottom-0 !z-[-1] !w-screen"
       ></canvas>
-      <div className="h-max relative">
+      <div id="targetDiv" className="h-max relative">
         <main className="">
           <Nav />
           <section

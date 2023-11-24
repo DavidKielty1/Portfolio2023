@@ -1,5 +1,4 @@
 import type { Config } from "tailwindcss";
-
 const config: Config = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -11,6 +10,19 @@ const config: Config = {
       worksans: ["WorkSans", "sans-serif"],
       raleway: ["Raleway", "sans-serif"],
       montserrat: ["Montserrat", "sans-serif"],
+    },
+    zIndex: {
+      "-10": "-10",
+      "0": "0",
+      "10": "10",
+      "20": "20",
+      "30": "30",
+      "40": "40",
+      "50": "50",
+      "25": "25",
+      "75": "75",
+      "100": "100",
+      auto: "auto",
     },
     screens: {
       xs: "300px",

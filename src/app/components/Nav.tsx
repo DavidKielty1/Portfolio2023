@@ -12,7 +12,7 @@ export default function Nav() {
   }
 
   return (
-    <nav className=" flex justify-center bg-slate-200/20 text-slate-600/80 w-screen fixed">
+    <nav className=" flex justify-center z-50 text-slate-600/80 w-screen fixed">
       <div className="flex justify-between w-screen 2xl:max-w-screen-3xl py-4 mx-10 tracking-wide text-2xl font-worksans font-medium">
         <div className="text-start">
           <a href="#home">DAVID KIELTY</a>

@@ -24,8 +24,8 @@ export default function AboutSection() {
     const ctx = canvas.getContext("2d");
 
     const resizeCanvas = () => {
-      canvas.width = document.documentElement.scrollWidth;
-      canvas.height = document.documentElement.scrollHeight;
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
     };
 
     resizeCanvas();
@@ -40,10 +40,10 @@ export default function AboutSection() {
 
       bubbles.push({
         x: Math.random() * canvas.width,
-        y: (canvas.height + 100) * 0.42,
+        y: canvas.height + 100,
         swing: Math.random() * 1 + 0.1,
         radius: Math.random() * 300 + 10,
-        speed: (Math.random() + 0.5) * 0.42,
+        speed: Math.random() + 0.5,
         opacity: Math.random() * 0.5 + 0.1,
         color: randomColor,
       });
