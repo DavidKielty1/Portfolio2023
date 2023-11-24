@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import AboutSection from "./components/AboutSection";
 import { useEffect } from "react";
-import anime from "animejs/lib/anime.es.js";
+import anime from "animejs";
 
 export default function Home() {
   useEffect(() => {
@@ -47,7 +47,8 @@ export default function Home() {
       cursor.x = e.clientX;
       cursor.y = e.clientY;
     });
-    const canvas = document.getElementById("animeCanvas");
+
+    const canvas = document.getElementById("animeCanvas") as HTMLCanvasElement;
     const ctx = canvas.getContext("2d");
 
     const resizeCanvas = () => {
@@ -58,7 +59,9 @@ export default function Home() {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    const bubbles = [];
+    const bubbles: Bubble[] = [];
+
+    if (!bubbles) return;
 
     const isMobile = window.innerWidth < 768; // Adjust based on your mobile breakpoint
     const scaleFactor = isMobile ? 0.5 : 1; // Reduce the scale factor for mobile view
@@ -67,7 +70,6 @@ export default function Home() {
       const randomColor = paleColors[
         Math.floor(Math.random() * paleColors.length)
       ].replace("OPACITY", (Math.random() * 0.9 + 0.1).toString());
-
       bubbles.push({
         x: Math.random() * canvas.width,
         y: canvas.height + 100,
@@ -80,34 +82,49 @@ export default function Home() {
     }
 
     function animate() {
+      if (!ctx) return;
       ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       for (let i = 0; i < bubbles.length; i++) {
         const b = bubbles[i];
         const distance = Math.sqrt(
-          (b.x - cursor.x) ** 2 + (b.y - cursor.y) ** 2
+          // @ts-ignore
+          (b?.x - cursor.x) ** 2 + (b?.y - cursor.y) ** 2
         );
         const maxCursorEffectRadius = 300; // change this value as needed
         if (distance < maxCursorEffectRadius) {
-          const dx = b.x - cursor.x;
-          const dy = b.y - cursor.y;
+          // @ts-ignore
+          const dx = b?.x - cursor.x;
+          // @ts-ignore
+          const dy = b?.y - cursor.y;
           const adjustFactor = 0.01; // this determines how quickly the bubble moves away
-          b.x += dx * adjustFactor;
-          b.y += dy * adjustFactor;
+          // @ts-ignore
+          b?.x += dx * adjustFactor;
+          // @ts-ignore
+          b?.y += dy * adjustFactor;
         }
         ctx.beginPath();
+        // @ts-ignore
         ctx.arc(b.x, b.y, b.radius, 0, 2 * Math.PI);
 
         const gradient = ctx.createRadialGradient(
+          // @ts-ignore
           b.x,
+          // @ts-ignore
           b.y,
           0,
+          // @ts-ignore
           b.x,
+          // @ts-ignore
           b.y,
+          // @ts-ignore
           b.radius
         );
+        // @ts-ignore
         gradient.addColorStop(0, b.color.replace("OPACITY", "1"));
+        // @ts-ignore
         gradient.addColorStop(0.5, b.color.replace("OPACITY", "0.5"));
+        // @ts-ignore
         gradient.addColorStop(1, b.color.replace("OPACITY", "0"));
         ctx.fillStyle = gradient;
 
@@ -123,8 +140,11 @@ export default function Home() {
         ctx.shadowOffsetX = 0;
         ctx.shadowOffsetY = 0;
 
+        // @ts-ignore
         if (b.y < -100) {
+          // @ts-ignore
           b.y = canvas.height + 100;
+          // @ts-ignore
           b.x += Math.sin(b.y * 0.01) * b.swing; // Adjusted the multiplier
         }
       }
