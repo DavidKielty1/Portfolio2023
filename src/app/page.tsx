@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import Nav, { DUMMY_DATA } from "./components/Nav";
+import Nav from "./components/Nav";
+import { ProjectData } from "./Helpers/ProjectData";
 import RoughAnnotation from "./components/RoughAnnotation";
 import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
@@ -61,7 +62,7 @@ export default function Home() {
             <Carousel id="carousel" config="config"></Carousel>
           </div>
           <ul className="sm:flex flex-col gap-10 mx-4 hidden xl:flex-row flex-wrap justify-center max-w-screen-3xl">
-            {DUMMY_DATA.map((project, idx) => (
+            {ProjectData.map((project, idx) => (
               <article
                 key={idx}
                 className="px-10 text-xl group text-center bg-white font-montserrat py-16 rounded-lg shadow-xl xl:w-[550px] transform transition-transform hover:shadow-2xl hover:scale-105 duration-800"
