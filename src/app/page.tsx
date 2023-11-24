@@ -93,15 +93,11 @@ export default function Home() {
         );
         const maxCursorEffectRadius = 300; // change this value as needed
         if (distance < maxCursorEffectRadius) {
-          // @ts-ignore
           const dx = b?.x - cursor.x;
-          // @ts-ignore
           const dy = b?.y - cursor.y;
           const adjustFactor = 0.01; // this determines how quickly the bubble moves away
-          // @ts-ignore
-          b?.x += dx * adjustFactor;
-          // @ts-ignore
-          b?.y += dy * adjustFactor;
+          b.x += dx * adjustFactor;
+          b.y += dy * adjustFactor;
         }
         ctx.beginPath();
         // @ts-ignore
