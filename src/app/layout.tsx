@@ -4,6 +4,9 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "DavidKielty Portfolio",
   description: "Let's work together.",
+  icons: {
+    icon: "/src/app/favicon.ico",
+  },
 };
 
 export default function RootLayout({
@@ -13,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="overflow-visible">{children}</body>
     </html>
   );
 }
