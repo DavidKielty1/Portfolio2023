@@ -59,7 +59,7 @@ export default function Home() {
     resizeCanvas();
     window.addEventListener("resize", resizeCanvas);
 
-    const bubbles: Bubble[] = [];
+    const bubbles = [];
 
     if (!bubbles) return;
 
