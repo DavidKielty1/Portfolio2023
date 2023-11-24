@@ -8,7 +8,7 @@ import Footer from "./components/Footer";
 import Carousel from "./components/Carousel";
 import AboutSection from "./components/AboutSection";
 import { useEffect } from "react";
-import anime from "animejs";
+import anime from "animejs/lib/anime.es.js";
 
 export default function Home() {
   useEffect(() => {
