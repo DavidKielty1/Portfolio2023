@@ -1,7 +1,7 @@
 export const ProjectData = [
   {
-    url: "https://rendezvue.vercel.app/",
-    title: "RendezVue",
+    url: "https://rendezvoo.vercel.app/",
+    title: "RendezVoo",
     description: "Can I have a hobby with a side of friends, please?",
     tech: "NextJS, Typescript, Tailwind, PrismaORM, PostgreSQL, OAuth, Zod, tRPC, CI/CD, Mapbox, HeadlessUI",
     imagesrc: "/meetupMain.png",

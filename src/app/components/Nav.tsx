@@ -131,34 +131,3 @@ export default function Nav() {
     </nav>
   );
 }
-
-export const DUMMY_DATA = [
-  {
-    url: "https://meetups-t3.vercel.app/",
-    title: "Unite",
-    description: "Can I have a hobby with a side of friends, please?",
-    tech: "NextJS, Typescript, Tailwind, PrismaORM, PostgreSQL, OAuth, Zod, tRPC, CI/CD",
-    imagesrc: "/meetupMain.png",
-  },
-  {
-    url: "https://pandareview.onrender.com/",
-    title: "Panda Review",
-    description: "Share your favourite oriental hot-spot diners!",
-    tech: "Javascript, MongoDB, Mongoose, Express, Node, Sessions",
-    imagesrc: "/panda.png",
-  },
-  {
-    url: "https://exquisite-souffle-cb2d07.netlify.app/",
-    title: "Scrumptious",
-    description: "Search for delicious recipes from all over the world!",
-    tech: "React, FetchAPI, Styled Components, Carousel",
-    imagesrc: "/Girlchef.png",
-  },
-  {
-    url: "https://foodapp-624be.firebaseapp.com/",
-    title: "Gusto Restaurant",
-    description: "Michelin Star quality delivered to your home.",
-    tech: " React, Firebase, ContextAPI, SASS",
-    imagesrc: "/Chefhat.png",
-  },
-];
