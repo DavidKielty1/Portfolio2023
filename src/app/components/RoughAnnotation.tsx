@@ -6,7 +6,7 @@ const RoughAnnotation = () => {
   const [show, setShow] = useState(true);
   return (
     <RoughNotationGroup show={show}>
-      <h1 className="font-raleway text-5xl font-bold">
+      <h1 className="font-gloock text-5xl font-normal">
         Hello! I&apos;m David, a{" "}
         <RoughNotation
           type="highlight"
@@ -19,7 +19,7 @@ const RoughAnnotation = () => {
         based in the United Kingdom
       </h1>
 
-      <p className="font-montserrat text-2xl text-justify">
+      <p className="font-raleway text-2xl text-justify">
         <span>
           As a{" "}
           <RoughNotation

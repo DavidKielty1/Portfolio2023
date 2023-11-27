@@ -5,7 +5,7 @@ export default function AboutSection() {
       className="relative flex justify-center bg-slate-200/20 text-slate-600 px-4 pt-4 pb-28"
     >
       <div className="max-w-screen-lg flex flex-col items-center h-full w-9/12 self-center bg-opacity-70 z-10 position-relative">
-        <h2 className="text-center font-raleway text-5xl font-bold py-10 md:py-16 xl:pt-48 ">
+        <h2 className="text-center font-montserrat font-semibold text-5xl py-10 md:py-16 xl:pt-48 ">
           About Me
         </h2>
         <p className="font-montserrat text-2xl text-center md:text-justify">

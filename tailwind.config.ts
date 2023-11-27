@@ -10,6 +10,9 @@ const config: Config = {
       worksans: ["WorkSans", "sans-serif"],
       raleway: ["Raleway", "sans-serif"],
       montserrat: ["Montserrat", "sans-serif"],
+      dmserif: ["DMSerifDisplay", "serif"],
+      unna: ["Unna", "serif"],
+      gloock: ["Gloock", "serif"],
     },
     zIndex: {
       "-10": "-10",

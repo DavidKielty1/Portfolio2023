@@ -1,18 +1,18 @@
 import Card from "./Card";
-import { DUMMY_DATA } from "./Nav";
+import { ProjectData } from "../Helpers/ProjectData";
 
 export default function CarouselItem() {
   return (
     <li className="splide__slide min-h-[700px]">
-      {DUMMY_DATA &&
-        DUMMY_DATA.map((dummy, idx) => (
+      {ProjectData &&
+        ProjectData.map((project, idx) => (
           <Card
             key={idx}
-            url={dummy.url}
-            title={dummy.title}
-            description={dummy.description}
-            tech={dummy.tech}
-            imagesrc={dummy.imagesrc}
+            url={project.url}
+            title={project.title}
+            description={project.description}
+            tech={project.tech}
+            imagesrc={project.imagesrc}
           />
         ))}
     </li>

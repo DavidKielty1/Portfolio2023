@@ -222,7 +222,7 @@ export default function Home() {
             className="flex justify-center bg-slate-200/20 text-slate-600 px-4 py-4"
           >
             <div className="flex flex-col items-center h-full max-w-screen-2xl">
-              <h2 className="text-center font-raleway text-5xl font-bold pt-10 md:py-20 ">
+              <h2 className="text-center font-montserrat text-5xl font-semibold pt-10 md:py-20 ">
                 Projects
               </h2>
               <div className="max-w-xs my-16 max-h-full block sm:hidden">
@@ -240,7 +240,7 @@ export default function Home() {
                       className="flex flex-col h-[500px] "
                     >
                       <div className=" flex flex-col gap-6 flex-1 py-4 px-4 tracking-tight mb-4 h-[180px] ">
-                        <h2 className="text-3xl font-bold uppercase tracking-widest hover:group-hover:scale-300">
+                        <h2 className="text-4xl font-semibold uppercase font-montserrat tracking-wide hover:group-hover:scale-300">
                           {project.title}
                         </h2>
                         <div className="relative w-100% ">
