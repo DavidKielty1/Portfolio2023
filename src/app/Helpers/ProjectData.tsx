@@ -24,7 +24,7 @@ export const ProjectData = [
     url: "https://foodapp-624be.firebaseapp.com/",
     title: "Gusto Restaurant",
     description: "Michelin Star quality delivered to your home.",
-    tech: " React, Firebase, ContextAPI, SASS",
+    tech: "React, Firebase, ContextAPI, SASS",
     imagesrc: "/Chefhat.png",
   },
 ];
