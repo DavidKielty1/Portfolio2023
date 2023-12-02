@@ -7,11 +7,11 @@ First, run the development server:
 testtest
 
 ```bash
-npm run dev
+npm run devsdsd
 # or
 yarn dev
 # or
-pnpm dev
+pnpm dev.
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
